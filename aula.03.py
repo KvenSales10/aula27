@@ -1,3 +1,4 @@
+aluno = []
 cont  = 0
 escolher_usuario = int(input())
 while cont <escolher_usuario:
@@ -6,11 +7,9 @@ while cont <escolher_usuario:
     nota2 =float(input())
     nota3 =float(input())
     nota4 = float(input())
-
     faltas = int(input())
 
     media = (nota1+nota2+nota3+nota4)/4
-
 
     if faltas >31:
         situaçao = "reprovado por falta "
@@ -19,21 +18,20 @@ while cont <escolher_usuario:
     elif media >=5:
         recuperaçao = float(input())
         if recuperaçao >=(10-media):
-          situaçao = "aprovado na recupertaçao"
-          print(situaçao)
+            situaçao = "aprovado na recupertaçao"
+        else:
+            situaçao="aprovado na recuperaçao "
     else:
-        situaçao="aprovado na recuperaçao "
-        print(situaçao)
-else:
-    situaçao ="aprovado por media "
-
-    #relatorio
-    print("\n----------------------------------------------")
-    print("tudo sobre o o aluno aqui ")
-    print (f"nome{nome}")
-    print (f"notas:{nota1,nota2,nota3,nota4}")
-    print(f"faltas:{faltas}")
-    print (f"media:{media}")
-    print(f"a airuaçao do aluno e {situaçao}")
-    print("-------------------------------------------------")        
+        situaçao ="reprovado por media "
+    aluno.append([nome,faltas,media,situaçao])
     cont+=1
+    #relatorio
+print(aluno)
+print("\n----------------------------------------------")
+print("tudo sobre o o aluno aqui ")
+print (f"nome{nome}")
+print (f"notas:{nota1,nota2,nota3,nota4}")
+print(f"faltas:{faltas}")
+print (f"media:{media}")
+print(f"a airuaçao do aluno e {situaçao}")
+print("-------------------------------------------------")        
