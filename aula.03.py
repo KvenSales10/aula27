@@ -1,4 +1,4 @@
-alunos = []   
+alunos = []  
 while True:
     aluno =faltas= situaçao= nome = 0.0
     nota =""
@@ -34,10 +34,12 @@ while True:
                 situaçao ="reprovado por media "
             alunos.append([nome,faltas,media,situaçao])
             cont+=1
-
-
     elif escolha_menu == 2:
 
         #relatorio
         print(alunos)
-         
+    elif escolha_menu==3:
+        print("fim")
+        break
+    
+ 
